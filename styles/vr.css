@@ -1,0 +1,313 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#4f3165, #04102e);
+    background-repeat: no-repeat;
+    font-family: 'Albert Sans', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 1px white;
+    align-items: center;
+    padding: 5px;
+}
+.menu{
+    display: none;
+}
+.nav-right img{
+    width: 38px;
+    height: 40px;
+}
+#shop{
+    display: none;
+}
+.nav-center ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    gap: 40px;
+}
+
+.nav-center a:hover{
+    border-bottom: solid 2px rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.nav-center ul li a:link{
+    color: white;
+    text-decoration: none;
+}
+.nav-center ul li a:visited {
+    color: white;
+  }
+
+.nav-left img{
+    width: 60px;
+    height: 60px;
+    transition: transform 0.5s ease;
+}
+.nav-left img:hover {
+    transform: rotate(360deg); 
+}   
+.main-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 01s ease;
+}
+#img{
+   display: none;
+}
+.main-top > p{
+    color: white;
+    font-size: 120px;
+    font-weight: 600;
+    border-bottom: 4px solid transparent; 
+    border-bottom-color: #3498db;
+    border-radius: 50%; 
+    animation: spin 1s linear infinite; 
+    transform: translateY(-20px);
+    animation: fadeInUp 2s ease-in-out forwards, slideUp 2s ease-in-out forwards;
+    transition: border-color 0.3s ease;
+}
+.main-top p:hover {
+    border-color: #ff0000;
+  }
+.main-top p span{
+    color: white;
+    font-size: 100px;
+    font-weight: 500;
+}
+.main-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+.main-bottom img{
+    width: 500px;
+    height: 550px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+    
+}
+.btn button{
+    width: 300px;
+    height: 90px;
+    color: white;
+    background-color: #008CB8;
+    border: none;
+    border-radius: 25px;
+    font-size: 45px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-family: "Oxanium", sans-serif;
+    background: linear-gradient(315deg, #008CB8 3%, #008CB8 38%, #9bcad6 68%, #008CB8 98%);
+    animation: gradient 8s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+.btn button a:link{
+    color: white;
+    text-decoration: none;
+
+}
+.btn a:visited {
+    color: white;
+  }
+.btn button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 10px 0px rgba(37, 152, 228, 0.305);
+    animation: none;
+}
+.btn p{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+#container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+.hidden {
+    position: absolute;
+    top: 65px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: auto;
+    background-color: rgba(19, 10, 42);
+    font-size: 20px;
+    display: none;
+}
+.hidden ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    line-height: 30px;
+    padding-left: 0;
+}
+
+.hidden ul li a:link{
+    color: white;
+    text-decoration: none;
+
+}
+.hidden ul li a:visited {
+    color: white;
+}
+footer{
+    max-width: 100vw;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container img{
+    width: 150px;
+    height: 50px;
+    margin: 0;
+}
+.last{
+    border: 1px solid white;
+    padding: 10px;
+}
+  @media screen and (max-width: 1150px){
+    #img{
+        display: block;
+     }
+    .main-bottom img{
+      display: none;
+    }
+    #container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #img{
+        width: 400px;
+        height: auto;
+    }
+    .btn button{
+        margin-top: 50px;
+    }
+
+  }
+  @media screen and (max-width: 745px){
+    .nav-center{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+   
+    .main-top > p{
+        font-size: 25vw;
+       margin-bottom: 0;
+    }
+    .main-top > p span{
+        
+        font-size: 16vw;
+    }
+    .main-top img{
+        width: 60vw;
+        height: 60vh;
+    }
+    .btn button{
+        width: 200px;
+        height:70px;
+        font-size: 30px;
+    }
+    .btn p{
+        font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 400px){
+    .btn button{
+        width: 150px;
+        height:60px;
+        font-size: 20px;
+    }
+    #img{
+        width: 75vw;
+        height: 60vh;
+    }
+    .btn button{
+        width: 200px;
+        height:50px;
+        font-size: 25px;
+    }
+   
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+  }

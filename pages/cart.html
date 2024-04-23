@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/vrlive.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/cart.css">
+    <title>Cart</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-left">
+            <a href="../index.html"><img src="../assets/img/vrlive.png" alt=""></a>
+        </div>
+        <div class="nav-center">
+            <ul>
+                <li><a href="../index.html">Main</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <img src="../assets/img/menu.svg" alt="">
+        </div>
+        <div class="nav-right">
+            <a href="../pages/login.html"><img src="../assets/img/profile.svg" alt=""></a>
+            <a href="cart.html" id="shop"><img src="../assets/img/navright.svg" alt=""></a>
+        </div>
+        <!--Mobile-->
+        <div class="hidden">
+            <ul>
+                <li><a href="../index.html">Main</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="capp">
+
+        <div class="title">
+            <h1>Cart</h1>
+        </div>
+        <section id="container">
+            <div class="container">
+                <p>Item(s) added to the cart</p>
+              
+                <div class="items">
+                      <ul>
+                        <li>
+                            <img id="cart-img" src="../assets/img/vr.png" alt="">
+                            <p>VR Headset</p>
+                            <p>1 item(s)</p>
+                            <p>99.99$</p>
+                        </li>
+                    </ul>
+                </div>
+                <p>Total: 99.99$</p>
+
+                <section id="card">
+                    <div class="card">
+                        <label for="">Name on Card</label>
+                        <input type="text">
+                        <label for="">Card Number</label>
+                        <input type="number">
+                        <div id="information">
+                            <div id="info1">
+                                <label for="monthYearInput">Exipration</label>
+                                <input type="month" id="monthYearInput" name="monthYearInput">  
+                            </div>
+                            <div id="info2">
+                                <label for="">CCV</label>
+                                <input type="number" name="" id="">  
+                            </div>
+                        </div>
+                        <label>Address</label>
+                        <textarea id="address" type="text" name="" id=""></textarea>
+                    </div>
+                </section>
+
+                <div class="buyBtn">
+                    <button id="btn">PURCHASE</button>
+                </div>
+            </div>
+        </section>
+     
+    </div>
+
+ 
+    <footer>
+        <div class='footer-container'>
+            <img src="../assets/img/codesius.svg" alt="">
+            <p>DEV.CODESIUS@GMAIL.COM</p>
+            <p class='last'>Copyright © CODESIUS 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="../js/cart.js"></script>
